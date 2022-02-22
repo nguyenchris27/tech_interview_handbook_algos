@@ -5,7 +5,7 @@
 
 // USING HASHMAP //
 // Faster runtime, worse space complexity
- const containsDuplicate = function(nums) {
+const containsDuplicate = function(nums) {
     let hashmap = {};
     for(let i = 0; i < nums.length; i++) {
         if(hashmap[nums[i]]) {
@@ -14,7 +14,7 @@
     } return false;
 };
 
-// USING SORT
+// USING SORT //
 // Slower runtime, better space complexity
 // const containsDuplicate = function(nums) {
 //     nums.sort((a, b) => a - b)

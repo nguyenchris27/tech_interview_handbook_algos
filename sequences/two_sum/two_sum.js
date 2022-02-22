@@ -3,7 +3,8 @@
  * @param {number} target
  * @return {number[]}
  */
- const twoSum = function(nums, target) {
+
+const twoSum = function(nums, target) {
     let seenMap = {};
     let result = [];
     console.log(seenMap);
