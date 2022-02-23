@@ -5,13 +5,13 @@
  */
 
 // Using Sort
-var isAnagram = function(s, t) {
+var isAnagram = function (s, t) {
     if (s.length === t.length) {
         sortedS = s.split("").sort().join("")
         sortedT = t.split("").sort().join("")
 
-        for(i = 0; i < s.length; i++) {
-            if(sortedS[i] != sortedT[i]) {
+        for (i = 0; i < s.length; i++) {
+            if (sortedS[i] != sortedT[i]) {
                 return false
             }
         } return true
@@ -19,13 +19,13 @@ var isAnagram = function(s, t) {
 };
 
 // Using Frequency Table
-var isAnagram = function(s, t) {
+var isAnagram = function (s, t) {
     if (s.length != t.length) {
         return false;
     }
-    
+
     let freqTable = {};
-    
+
     for (i = 0; i < s.length; i++) {
         if (freqTable.hasOwnProperty(s[i])) {
             freqTable[s[i]]++;
@@ -33,12 +33,12 @@ var isAnagram = function(s, t) {
             freqTable[s[i]] = 1;
         }
     }
-    
-    for(j = 0; j < t.length; j++) {
+
+    for (j = 0; j < t.length; j++) {
         if (freqTable[t[j]]) {
             freqTable[t[j]]--;
-            
-            if (freqTable[t[j]] < 1){
+
+            if (freqTable[t[j]] < 1) {
                 delete freqTable[t[j]]
             }
 
