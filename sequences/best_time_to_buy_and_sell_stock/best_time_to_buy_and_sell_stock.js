@@ -3,10 +3,10 @@
  * @return {number}
  */
 
-const maxProfit = function(prices) {
+const maxProfit = function (prices) {
     let minBuyPrice = Infinity;
     let maxProfit = 0;
-    
+
     for (i = 0; i < prices.length; i++) {
         if (prices[i] < minBuyPrice) {
             minBuyPrice = prices[i]
